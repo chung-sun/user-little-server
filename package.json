@@ -5,6 +5,7 @@
   "main": "http_server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm install",
     "start": "node http_server.js"
   },
   "author": "chungsun.dev@gmail.com",
@@ -16,5 +17,8 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^7.5.0"
+  },
+  "engines": {
+    "node": "^16.x"
   }
 }
