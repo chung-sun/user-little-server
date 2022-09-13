@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/superagent/3.8.3/superagent.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <div style="padding: 50px;">
+        <button style="font-size: 3em;" class="btn btn-primary" onclick="showAllUserRaw()">Show All User</button>
+        <br><br>
+        <div id="status"></div>
+    </div>
+
+    <script>
+
+        function showAllUserRaw () {
+            const url = 'http://localhost:3000/data';
+
+            superagent
+                .get(url)
+                .end(function (err, res) {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        document.getElementById('status').innerHTML = JSON.stringify(res.body);
+                    }
+                });
+        }
+    </script>
+
+</body>
+</html>

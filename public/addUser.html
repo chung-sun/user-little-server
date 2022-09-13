@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/superagent/3.8.3/superagent.min.js"></script>
+    <!-- <script src="https://cdnout.com/Faker/faker.min.js"></script> -->
+    <title>Document</title>
+</head>
+<body>
+    
+    <div style="padding: 50px;">
+        <button style="font-size: 3em;" class="btn btn-primary" onclick="add()">Add User</button>
+        <div id="status"></div>
+    </div>
+
+    <script type="module">
+
+        import { faker } from 'https://cdn.skypack.dev/@faker-js/faker'
+        
+        var firstName     = faker.name.firstName();
+        var lastName      = faker.name.lastName();
+        var name          = firstName + ' ' + lastName;
+        var dob           = faker.date.birthdate();
+        var userName      = faker.internet.userName(firstName, lastName);
+        var email         = faker.internet.email(firstName, lastName);
+        var password      = faker.internet.password(10);
+        var phone         = faker.phone.number();
+        var streetaddress = faker.address.streetAddress();
+        var citystatezip  = faker.address.city() + ' ' + faker.address.stateAbbr() + ' ' + faker.address.zipCode();
+        var latitude      = faker.address.latitude();
+        var longitude     = faker.address.longitude();
+        var avatar        = faker.image.avatar();
+
+        console.log(name);
+        console.log(dob);
+        console.log(userName);
+        console.log(email);
+        console.log(password);
+        console.log(phone);
+        console.log(streetaddress);
+        console.log(citystatezip);
+        console.log(latitude);
+        console.log(longitude);
+        console.log(avatar);
+        
+        function add () {
+
+            const user = { name, dob, userName, email, password, phone, streetaddress, citystatezip, latitude, longitude, avatar };
+    
+            const url = 'http://localhost:3000/add';
+    
+            superagent
+                .post(url)
+                .send(user)
+                .end(function (err, res) {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        console.log(res);
+                        if (res.statusCode === 200) {
+                            document.getElementById('status').innerHTML = `
+                                <b>Response: Status Code 200.</b> The HTTP 200 OK seccess status response code indicates that the HTTP request has succeeded.<br>
+                                User: ${name}<br>
+                                ${new Date()}`;
+                        }
+                    }
+                });
+            };
+
+        add();
+
+    </script>
+
+</body>
+</html>
