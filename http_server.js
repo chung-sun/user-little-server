@@ -60,6 +60,8 @@ app.post('/add', function (req, res) {
 
 // Start Server
 // ------------------------------------
-app.listen(3001, function (err, res) {
-    console.log('Running on port 3001!');
+const port = process.env.PORT || 4000;
+
+app.listen(port, function (err, res) {
+    console.log(`Running on port ${port}`);
 });
