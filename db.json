@@ -1,3 +1,17 @@
 {
-  "users": []
+  "users": [
+    {
+      "name": "Vena Doyle",
+      "dob": "1956-03-19T11:15:24.000Z",
+      "email": "Vena81@hotmail.com",
+      "username": "Vena.Doyle",
+      "password": "X0BIV1A83u",
+      "phone": "1-308-295-1428 x243",
+      "streetaddress": "97288 Ola Villages",
+      "citystatezip": "Lake Keara NH 61212-9374",
+      "latitude": "28.6731",
+      "longitude": "-125.1329",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1185.jpg"
+    }
+  ]
 }
