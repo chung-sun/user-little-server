@@ -1,30 +1,3 @@
 {
-  "users": [
-    {
-      "name": "Oda Kris",
-      "dob": "1970-03-27T17:00:15.564Z",
-      "email": "Oda_Kris41@yahoo.com",
-      "username": "Oda_Kris8",
-      "password": "XePooqN9R3",
-      "phone": "210-573-9341",
-      "streetaddress": "8637 Kihn Squares",
-      "citystatezip": "New Rochelle CT 35234-5763",
-      "latitude": "30.0115",
-      "longitude": "10.3491",
-      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/666.jpg"
-    },
-    {
-      "name": "Marilou O'Reilly",
-      "dob": "1964-08-10T14:33:26.550Z",
-      "email": "Marilou.OReilly19@gmail.com",
-      "username": "Marilou77",
-      "password": "KZHxZXfMH5",
-      "phone": "205-803-9378 x2756",
-      "streetaddress": "208 Durgan Point",
-      "citystatezip": "North Keven DE 84909",
-      "latitude": "-21.2581",
-      "longitude": "-118.3521",
-      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/442.jpg"
-    }
-  ]
+  "users": []
 }
