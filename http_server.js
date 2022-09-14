@@ -4,9 +4,13 @@ const low = require('lowdb');
 const fs = require('lowdb/adapters/FileSync');
 const adapter = new fs('db.json');
 const db = low(adapter);
+const cors = require('cors');
 
 // init data store
 db.defaults({ users : []}).write();
+
+// Allow cross-origin resource sharing CORS
+app.use(cors());
 
 // static file
 app.use(express.static('public'));
@@ -56,6 +60,6 @@ app.post('/add', function (req, res) {
 
 // Start Server
 // ------------------------------------
-app.listen(3000, function (err, res) {
-    console.log('Running on port 3000!');
+app.listen(3001, function (err, res) {
+    console.log('Running on port 3001!');
 });
