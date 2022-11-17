@@ -4,7 +4,7 @@
   "description": "",
   "main": "http_server.js",
   "scripts": {
-    "test": "npm test",
+    "test": "jest",
     "build": "npm install",
     "start": "node http_server.js"
   },
